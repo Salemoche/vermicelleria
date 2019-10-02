@@ -1,0 +1,48 @@
+:root {
+
+    --font-title: 6.5vw;
+    --font-subtitle: 3.6vw;
+    --font-menu: 2.3vw;
+    --font-text: 2.9vw;
+}
+
+//
+// Breakpoints
+//
+
+$breakpoint-small: 375px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1400px;
+
+//
+// Spacing
+//
+
+$spacing-side: 6vw;
+$spacing-top: 12vh;
+
+
+
+//
+// Font Sizes
+//
+
+$font-title: var(--font-title);
+$font-subtitle: var(--font-subtitle);
+$font-menu: var(--font-menu);
+$font-text: var(--font-text);
+
+
+// 
+// Colors
+//
+
+$blue: rgb(58, 53, 131);
+$orange: rgb(230, 103, 46);
+
+//
+// Other
+//
+
+$transition-time: .1s;
+$transition-time-long: .3s;

@@ -1,0 +1,28 @@
+{
+  "name": "vermicelleria",
+  "version": "1.0.0",
+  "description": "Vermicelleria Website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Bach",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-polyfill": "^6.26.0",
+    "gsap": "^2.1.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.1",
+    "matter-js": "^0.14.2",
+    "normalize.css": "^8.0.1",
+    "p5": "^0.9.0",
+    "scrollmagic": "^2.0.7"
+  }
+}

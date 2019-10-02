@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vermicelleria</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./dist/css/style.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="./node_modules/p5/lib/p5.min.js"></script>
+    <!-- <script src="./node_modules/matter-js/build/matter.min.js"></script> -->
+</head>
+<body>
+    <!-- <script src="./dist/js/script-1.js"></script> -->
+    <!-- <script src="./dist/js/script-2.js"></script> -->
+    <div id="burger-icon" class="burger-icon"></div>
+    <div id="menu" class="menu">
+        <ul class="menu__list">
+            <!-- <li class="menu__list__item menu__list__item-landing">
+                <a href="#landing">Landing</a>
+            </li> -->
+            <!-- <li class="menu__list__item menu__list__item-date">
+                <a href="#date">Datum</a>
+            </li> -->
+            <li class="menu__list__item menu__list__item-idee">
+                <a href="#idee">Die Idee</a>
+            </li>
+            <li class="menu__list__item menu__list__item-images">
+                <a href="#vermicelles">Das Vermicelles</a>
+            </li>
+            <!-- <li class="menu__list__item menu__list__item-images">
+                <a href="#images">Images</a>
+            </li> -->
+            <li class="menu__list__item menu__list__item-tellhof">
+                <a href="#tellhof">Im Tellhof</a>
+            </li>
+            <li class="menu__list__item menu__list__item-vermicellesfans">
+                <a href="#vermicellesfans">Vermicellesfans</a>
+            </li>
+            <li class="menu__list__item menu__list__item-crowdfunding">
+                <a href="#crowdfunding">Crowdfunding</a>
+            </li>
+            <li class="menu__list__item menu__list__item-contact">
+                <a href="#kontakt">Kontakt</a>
+            </li>
+        </ul>
+    </div>
+    <main class="main">
+        <section id="landing" class="landing">
+            <div class="landing__date">1.-24. November 2019</div>
+            <div class="landing__logo"></div>
+            <div class="landing__background">
+                <img class="landing__background__image" src="./dist/assets/bg-1.svg" alt="" srcset="" 
+                style="position:absolute; left: 50%; top: 40%; transform: translate(-50%,-50%); width: 130%;">
+            </div>
+        </section>
+        <div id="landing-trigger"></div>
+        <section id="date" class="date">
+            <div class="date__date">
+                <h2>Eröffnungsfest<br>
+                    1. November 2019<br>
+                    ab 17 Uhr</h2>
+            </div>
+        </section>
+        <section id="idee" class="idee">
+            <div class="idee__title">
+                <h2>Die Idee</h2>
+            </div>
+            <div class="idee__text">
+                <p>Die Vermicelleria ist ein herbstlicher Ort, wo Schweizer Dessertkultur gefeiert wird. Zu Gast in der Gelateria Tellhof im Kreis 4 ist die Vermicelleria vom 1.–24. November die saisonale Anlaufstelle für alle Liebhaber*innen des Maronidesserts aus der Presse!</p>
+            </div>
+        </section>
+        <section id="vermicelles" class="vermicelles">
+            <div class="vermicelles__title">
+                <h2>Das Vermicelles</h2>
+            </div>
+            <div class="vermicelles__text">
+                <p>Obschon ein uraltes Traditionsdessert, zu kaufen im Grossverteiler, zu geniessen beim Confiseur oder in der Landbeiz, besteht das Vermicelles heute ganz selten aus Schweizer Maroni. Bis jetzt. Die Vermicelleria serviert Coupes und Törtli mit feinem Vermicelles aus frisch geernteten Aargauer und Bergeller Maroni – hergestellt von der Vermicellesfabrik Rudolf Moser AG am Bielersee. Einmal Nesselrode bitte!</p>
+            </div>
+        </section>
+        <section id="images" class="images">
+            <div class="images__image image image-1">
+                <img class="image__img image__img-1" src="./dist/assets/photos/foto-1.jpg" alt="">
+            </div>
+            <div class="images__image image image-2">
+                <img class="image__img image__img-2" src="./dist/assets/photos/foto-2.jpg" alt="">
+            </div>
+            <div class="images__image image image-3">
+                <img class="image__img image__img-3" src="./dist/assets/photos/foto-3.jpg" alt="">
+            </div>
+            <div class="images__image image image-4">
+                <img class="image__img image__img-4" src="./dist/assets/photos/foto-4.jpg" alt="">
+            </div>
+            <div class="images__image image image-5">
+                <img class="image__img image__img-5" src="./dist/assets/photos/foto-5.jpg" alt="">
+            </div>
+            <div class="images__image image image-6 wide">
+                <img class="image__img image__img-6" src="./dist/assets/photos/foto-6.jpg" alt="">
+            </div>
+            <div class="images__image image image-7 wide">
+                <img class="image__img image__img-7" src="./dist/assets/photos/foto-7.jpg" alt="">
+            </div>
+            <div class="images__image image image-8 wide">
+                <img class="image__img image__img-8" src="./dist/assets/photos/foto-8.jpg" alt="">
+            </div>
+            <div class="images__image image image-9">
+                <img class="image__img image__img-9" src="./dist/assets/photos/foto-9.jpg" alt="">
+            </div>
+            <div class="images__image image image-10">
+                <img class="image__img image__img-10" src="./dist/assets/photos/foto-10.jpg" alt="">
+            </div>
+        </section>
+        <section id="tellhof" class="tellhof">
+            <div class="tellhof__title">
+                <h2>Tellhof</h2>
+            </div>
+            <div class="tellhof__text">
+                <p>In der Gelateria Tellhof im Kreis 4 lassen sich die Zürcher*innen an den warmen Tagen des Jahres von der Tellhof-Equipe mit köstlichem Glacé und Dolce Far Niente verwöhnen. Mit der Vermicelleria als Saisongast diesen November wird dieser Sommeroase gehörig der Herbst eingehaucht!</p>
+            </div>
+        </section>
+        <section id="vermicellesfans" class="vermicellesfans">
+            <div class="vermicellesfans__title">
+                <h2>Vermicellesfans</h2>
+            </div>
+            <div class="vermicellesfans__image image">
+                <img class="image__img image__img-3" src="./dist/assets/photos/5E0A4384.jpg" alt="">
+            </div>
+            <div class="vermicellesfans__text">
+                <p>Wir sind Hanna, Nicole und David. Wir haben uns und unsere Leidenschaft für Schweizer Alltagskultur und feine Desserts während des Designstudiums an der ZHdK kennengelernt. Und nun laden wir zum grossen Vermicelles-Plausch ein!</p>
+            </div>
+    
+        </section>
+        <section id="crowdfunding" class="crowdfunding">
+            <div class="crowdfunding__title">
+                <h2>Crowdfunding</h2>
+            </div>
+            <div class="crowdfunding__text">
+                <p>Um fast einen Monat lang eine Vermicelleria betreiben und Schweizer Vermicelles pressen zu können brauchen wir Startkapital. Damit garantieren wir, die Anbauer, Produzenten und Vermieter auch bezahlen zu können. Unterstütze uns und somit ein Stück Kulturgut. Zum Essen. Mhmmm... </p>
+            </div>
+        </section>
+        <section id="kontakt" class="kontakt">
+            <div class="kontakt__offnungszeiten">
+                <div class="kontakt__offnungszeiten__title">
+                    <h3>Öffnungszeiten</h3>
+                </div>
+                <div class="kontakt__offnungszeiten__info">
+                    <div class="kontakt__offnungszeiten__info__day">
+                        Mi-Fr
+                    </div>
+                    <div class="kontakt__offnungszeiten__info__time">
+                        12.30—22.00
+                    </div>
+                    <div class="kontakt__offnungszeiten__info__day">
+                        Sa/So
+                    </div>
+                    <div class="kontakt__offnungszeiten__info__time">
+                        14.00—22.00
+                    </div>
+                </div>
+            </div>
+            <div class="kontakt__kontakt">
+                <div class="kontakt__kontakt__title">
+                    <h3>Kontakt</h3>
+                </div>
+                <div class="kontakt__kontakt__info">
+                    <div class="kontakt__kontakt__info__item">Gelati Tellhof</div>
+                    <a href="https://www.google.com/maps?safe=off&sxsrf=ACYBGNR4PcVqaVYByVML66zG-7CIhXYRRg:1568813560122&q=tellhof&uact=5&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjqpbaSvtrkAhUR-YUKHa8YCQ4Q_AUIEigB" target="_blank" rel="noopener noreferrer">
+                        <div class="kontakt__kontakt__info__item">Tellstrasse 20</div>
+                        <div class="kontakt__kontakt__info__item">8004 Zürich</div>
+                    </a>
+                </div>
+            </div>
+            <div class="kontakt__social">
+                <div class="kontakt__social__info__item">
+                    <a href="mailto:mhmm@vermicelleria.ch">mhmm@vermicelleria.ch</a>
+                </div>
+                <div class="kontakt__social__info__item">
+                    <a href="http://www.instagram.com/vermicelleria" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+                <div class="kontakt__social__info__item">
+                    <a href="https://www.facebook.com/vermicelleria/?tn-str=k*F" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="sticker__container">
+        <a href="https://wemakeit.com/projects/die-vermicelleria">
+        <div class="sticker"></div>
+    </a>
+    </div>
+    <script src="./dist/js/script.js"></script>
+    <script src="./dist/js/scrollmagic.js"></script>
+    <div id="vermicelle-presse" class="vermicelle-presse"></div>
+    <script src="./dist/js/vermicelles.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com_linotype_FontExplorerX_PATH</key>
+	<string>/Users/itz/Downloads/Obibok-Inversed.otf</string>
+	<key>com_linotype_FontExplorerX_comment</key>
+	<string></string>
+	<key>com_linotype_FontExplorerX_copyright</key>
+	<string>Copyright © 2017 by Maciej Po_czy_ski. All rights reserved.</string>
+	<key>com_linotype_FontExplorerX_description</key>
+	<string></string>
+	<key>com_linotype_FontExplorerX_designer</key>
+	<string>Maciej Po_czy_ski</string>
+	<key>com_linotype_FontExplorerX_designerURL</key>
+	<string>http://maciej.polczynski.com</string>
+	<key>com_linotype_FontExplorerX_embeddingRights</key>
+	<string>Vorschau- und Druck-Einbettung erlaubt</string>
+	<key>com_linotype_FontExplorerX_familyName</key>
+	<array>
+		<string>Obibok</string>
+	</array>
+	<key>com_linotype_FontExplorerX_fileName</key>
+	<array>
+		<string>Obibok-Inversed.otf</string>
+	</array>
+	<key>com_linotype_FontExplorerX_format</key>
+	<string>OpenType (PostScript-basiert)</string>
+	<key>com_linotype_FontExplorerX_fullName</key>
+	<array>
+		<string>Obibok Inversed</string>
+	</array>
+	<key>com_linotype_FontExplorerX_isBroken</key>
+	<false/>
+	<key>com_linotype_FontExplorerX_isInSystemFolder</key>
+	<false/>
+	<key>com_linotype_FontExplorerX_isSystemFont</key>
+	<false/>
+	<key>com_linotype_FontExplorerX_license</key>
+	<string></string>
+	<key>com_linotype_FontExplorerX_licenseURL</key>
+	<string></string>
+	<key>com_linotype_FontExplorerX_manufacturer</key>
+	<string>Maciej Po_czy_ski</string>
+	<key>com_linotype_FontExplorerX_psName</key>
+	<array>
+		<string>Obibok-Inversed</string>
+	</array>
+	<key>com_linotype_FontExplorerX_style</key>
+	<array>
+		<string>Inversed</string>
+	</array>
+	<key>com_linotype_FontExplorerX_trademark</key>
+	<string></string>
+	<key>com_linotype_FontExplorerX_uniqueName</key>
+	<array>
+		<string>1.000;laic;Obibok-Inversed</string>
+	</array>
+	<key>com_linotype_FontExplorerX_vendorName</key>
+	<string>Nicht eindeutig</string>
+	<key>com_linotype_FontExplorerX_vendorURL</key>
+	<string>http://maciej.polczynski.com</string>
+	<key>com_linotype_FontExplorerX_version</key>
+	<string>Version 1.000;PS 001.000;hotconv 1.0.88;makeotf.lib2.5.64775</string>
+	<key>kMDItemDisplayName</key>
+	<string>Obibok Inversed</string>
+	<key>kMDItemTitle</key>
+	<string>Obibok Inversed</string>
+</dict>
+</plist>

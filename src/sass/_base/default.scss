@@ -1,0 +1,608 @@
+@import '_base/config';
+@import '_base/mixins';
+
+@font-face {
+    font-family: "Maison";
+    src: url("../assets/MaisonNeue-Book.woff") format('woff');
+}
+
+@font-face {
+    font-family: "Obibok";
+    src: url("../assets/Obibok-Inversed.woff") format('woff');
+}
+
+* {
+    color: $blue;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    cursor: url("../assets/mouse.png") 45 45, auto !important;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+section {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    padding: $spacing-top $spacing-side;
+    // background: white;
+    // box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.5);
+}
+
+main {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: Obibok;
+    margin: 0;
+}
+
+h2 {
+    font-size: $font-title;
+    // text-align: center;
+    margin-top: 0;
+    margin-bottom: 9vh;
+}
+
+p {
+    font-size: $font-text;
+    // text-align: center;
+    margin-top: 0;
+    font-family: Maison;
+}
+
+a {
+    transition: $transition-time;
+
+    div {
+        transition: $transition-time;    
+    }
+
+    &:hover {
+        color: $orange;
+
+        div {
+            color: $orange;
+        }
+    }
+}
+
+.image {
+    height: 30vw;
+    width: calc(30vw / 1.5);
+    position: absolute;
+    cursor: grab;
+    // background-color:$orange;
+    transition: background-color transform $transition-time;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+
+
+    &-1 {
+        left: 64vw;
+        top: 10vh;
+    }
+
+    &-2 {
+        left: 24vw;
+        top: 54vh;
+    }
+
+    &-3 {
+        left: 37vw;
+        top: 5vh;
+    }
+
+    &-4 {
+        left: 40vw;
+        top: 57vh;
+    }
+
+    &-5 {
+        left: 10vw;
+        top: 6vh;
+    }
+
+    &-6 {
+        left: 63vw;
+        top: 70vh;
+    }
+
+    &-7 {
+        left: 55vw;
+        top: 23vh;
+    }
+
+    &-8 {
+        left: 67vw;
+        top: 42vh;
+    }
+
+    &-9 {
+        left: 27vw;
+        top: 17vh;
+    }
+
+    &-10 {
+        left: 5vw;
+        top: 60vh;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.5);
+    }
+
+    &.dragged {
+        // background-color: $orange;
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.5);
+        cursor: grabbing;
+    }
+
+    &.wide {
+        width: 30vw;
+        height: calc(30vw / 1.5);   
+    }
+
+    &__img {
+        @include center;
+        width: 100%;
+        height: auto;
+    }
+}
+
+canvas {
+    @include center;
+    z-index: -2;
+    position: fixed;
+}
+
+.sticker__container {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+
+
+    .sticker {
+        width: 10vw;
+        height: 10vW;
+        transition: $transition-time;
+        border-radius: 50%;
+
+        background-image: url("../assets/kleber.svg");
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.5);
+        }
+
+    }
+
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: beat;
+}
+
+@keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+    2% {
+      transform: scale(1.05);
+    }
+    6% {
+      transform: scale(1);
+    }
+    8% {
+      transform: scale(1.05);
+    }
+    10% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+#landing-trigger {
+}
+
+
+//==========================================
+//Menu
+//==========================================
+
+
+.burger-icon {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    // background: $orange;
+    z-index: 99;
+    transition: $transition-time;
+    
+    background-image: url("../assets/toertli.svg");
+    background-size: contain;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.menu {
+    position: absolute;
+    z-index: 10;
+    top: 1vw;
+    right: 1vw;
+    height: auto;
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        width: 20vw;
+        align-content: space-between;
+
+        &__item {
+            margin: 0;
+            padding: 0;
+            // text-align: right;
+            width: 100%;
+            margin-bottom: 0.8vw;
+
+            a {
+                font-family: Obibok;
+                font-size: $font-menu;
+                text-decoration: none;
+            }
+
+            .active {
+                color: $orange;
+            }
+        }
+    }
+}
+
+
+//==========================================
+//landing
+//==========================================
+
+.landing {
+
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    height: 90vh;
+    // background: none;
+    // overflow-x: hidden;
+    // overflow-y: visible;
+
+    &__date {
+        position: absolute;
+        left: 1vw;
+        top: 1vw;
+        font-size: 2.9vw;
+        font-family: Obibok;
+        z-index: 5;
+    }
+
+    &__logo {
+        @include center;
+
+        height: 80vh;
+        width: 80vh;
+        z-index: 5;
+
+        // background-color: $blue;
+        background-image: url("../assets/logo-round.svg");
+        background-size: 94%;
+
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: spin-logo;
+    }
+
+    &__background {
+
+        // height: 120vh;
+        // width: 100vw;
+        // @include center;
+        // background-image: url("../assets/bg-1.svg");
+        // background-size: 130%;
+        // background-position: center 100%;
+        background: white;
+        width: 100vw;
+        height: 100vh;
+        // overflow-x: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &__image {
+            @include center;
+            top: 40%;
+            width: 130%;
+        }
+    
+    }
+}
+
+
+@keyframes spin-logo {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+//==========================================
+//date
+//==========================================
+
+.date {
+
+    &__date {
+        @include center;
+        width: calc(100vw - (2*#{$spacing-side}))
+    }
+
+}
+
+
+//==========================================
+//idee
+//==========================================
+
+.idee {
+
+}
+
+
+//==========================================
+//images
+//==========================================
+
+.images {
+
+}
+
+
+//==========================================
+//tellhof
+//==========================================
+
+.tellhof {
+
+}
+
+
+//==========================================
+//vermicellesfans
+//==========================================
+
+.vermicellesfans {
+    &__image {
+        left: 15vw;
+    }
+
+    &__text {
+        width: 50%;
+        margin-left: 50%;
+    }
+}
+
+
+//==========================================
+//crowdfunding
+//==========================================
+
+.crowdfunding {
+
+}
+
+
+//==========================================
+//kontakt
+//==========================================
+
+.kontakt {
+    font-family: Obibok;
+    // text-align: left;
+
+    * {
+        font-size: $font-subtitle;
+    }
+
+    > div {
+        width: 60vw;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    h3 {
+        margin-bottom: 3vh;
+    }
+
+    &__kontakt {
+        margin-bottom: 5vh !important;
+    }
+
+    .kontakt__offnungszeiten, .kontakt__title {
+        margin-bottom: calc(#{$spacing-top} / 2);
+    }
+
+    .kontakt__offnungszeiten__info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;    
+        width: 35vw;
+        margin: 0 auto;
+        max-width: 450px;
+
+        &__day {
+            width: 30%;
+            text-align: left;
+        }
+
+        &__time {
+            width: 70%;
+            text-align: right;
+
+        }
+    }
+}
+
+
+.vermicelle-presse {
+    position: fixed;
+    top: -15vw;
+    height: 25vw;
+    width: 25vw;
+    width: 260px;
+    // background: $blue;
+    background-image: url("../assets/presse.svg");
+    transform: translateX(-67%);
+    transition: transform .5s;
+    z-index: -1;
+
+
+    &.off {
+        // background: $orange;
+        transform: translate(-67%, -20px);
+    }
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+
+    section {
+        padding: $spacing-top $spacing-side;
+    }
+
+    .vermicelle-presse {
+        display: none;
+    }
+
+    .sticker__container .sticker {
+        width: 15vh;
+        height: 15vh;
+    }
+
+    .burger-icon {
+        display: inherit;
+    }
+
+    .image {
+        position: relative;
+        height: calc(100vw - 12vw);
+        margin-bottom: 2vh;
+        width: calc((100vw - 12vw) / 1.5);left: 50vw;
+        right: unset;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:hover {
+            transform: translateX(-50%) scale(1);
+        }
+
+        &.wide {
+            width: calc(100vw - 12vw);
+            height: calc((100vw - 12vw) / 1.5);
+        }
+    }
+
+    .menu {
+        position: fixed;
+        width: 100vw;
+        background: white;
+        right: -100vw;
+        transition: $transition-time-long;
+        height: 100vh;
+        padding: 20vh 0; 
+
+        &.active {
+            right: 0;
+        }
+
+        &__list {
+            top: 0;
+            width: 100%;
+            align-content: space-between;
+            align-items: space-between;
+            height: 100%;
+
+            &__item a {
+                text-align: center;
+            }
+            
+            &__item {
+                text-align: center;
+            }
+        }
+    }
+
+    .landing {
+        &__background {
+            background-position: center;
+            transform: translate(-50%, -50%) rotate(90deg);
+            height: 200vw;
+            width: 200vh;
+        }
+
+        &__logo {
+            width: 80vw;
+            height: 80vh;
+        }
+    }
+    
+    .vermicellesfans__text {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    // .images {
+    //     padding: unset;
+    // }
+
+    .kontakt > div {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .kontakt .kontakt__offnungszeiten__info {
+        width: 65vw;
+    }
+}
+
+.safari {
+    canvas, #vermicelle-presse {
+        display: none;
+    }
+}
+

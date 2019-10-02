@@ -1,0 +1,405 @@
+@charset "UTF-8";
+:root {
+  --font-title: 6.5vw;
+  --font-subtitle: 3.6vw;
+  --font-menu: 2.3vw;
+  --font-text: 2.9vw; }
+
+:root {
+  --font-title: 6.5vw;
+  --font-subtitle: 3.6vw;
+  --font-menu: 2.3vw;
+  --font-text: 2.9vw; }
+
+@font-face {
+  font-family: "Maison";
+  src: url("../assets/MaisonNeue-Book.woff") format("woff"); }
+
+@font-face {
+  font-family: "Obibok";
+  src: url("../assets/Obibok-Inversed.woff") format("woff"); }
+
+* {
+  color: #3a3583;
+  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  cursor: url("../assets/mouse.png") 45 45, auto !important; }
+
+html {
+  scroll-behavior: smooth; }
+
+section {
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  padding: 12vh 6vw; }
+
+main {
+  overflow: hidden; }
+
+h1, h2, h3, h4 {
+  font-family: Obibok;
+  margin: 0; }
+
+h2 {
+  font-size: var(--font-title);
+  margin-top: 0;
+  margin-bottom: 9vh; }
+
+p {
+  font-size: var(--font-text);
+  margin-top: 0;
+  font-family: Maison; }
+
+a {
+  transition: 0.1s; }
+  a div {
+    transition: 0.1s; }
+  a:hover {
+    color: #e6672e; }
+    a:hover div {
+      color: #e6672e; }
+
+.image {
+  height: 30vw;
+  width: calc(30vw / 1.5);
+  position: absolute;
+  cursor: -webkit-grab;
+  cursor: grab;
+  transition: background-color transform 0.1s;
+  overflow: hidden;
+  left: 50%;
+  top: 50%; }
+  .image-1 {
+    left: 64vw;
+    top: 10vh; }
+  .image-2 {
+    left: 24vw;
+    top: 54vh; }
+  .image-3 {
+    left: 37vw;
+    top: 5vh; }
+  .image-4 {
+    left: 40vw;
+    top: 57vh; }
+  .image-5 {
+    left: 10vw;
+    top: 6vh; }
+  .image-6 {
+    left: 63vw;
+    top: 70vh; }
+  .image-7 {
+    left: 55vw;
+    top: 23vh; }
+  .image-8 {
+    left: 67vw;
+    top: 42vh; }
+  .image-9 {
+    left: 27vw;
+    top: 17vh; }
+  .image-10 {
+    left: 5vw;
+    top: 60vh; }
+  .image:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5); }
+  .image.dragged {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.5);
+    cursor: -webkit-grabbing;
+    cursor: grabbing; }
+  .image.wide {
+    width: 30vw;
+    height: calc(30vw / 1.5); }
+  .image__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto; }
+
+canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  position: fixed; }
+
+.sticker__container {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: beat;
+          animation-name: beat; }
+  .sticker__container .sticker {
+    width: 10vw;
+    height: 10vW;
+    transition: 0.1s;
+    border-radius: 50%;
+    background-image: url("../assets/kleber.svg"); }
+    .sticker__container .sticker:hover {
+      transform: translateY(-1px);
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5); }
+
+@-webkit-keyframes beat {
+  0% {
+    transform: scale(1); }
+  2% {
+    transform: scale(1.05); }
+  6% {
+    transform: scale(1); }
+  8% {
+    transform: scale(1.05); }
+  10% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes beat {
+  0% {
+    transform: scale(1); }
+  2% {
+    transform: scale(1.05); }
+  6% {
+    transform: scale(1); }
+  8% {
+    transform: scale(1.05); }
+  10% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+
+.burger-icon {
+  display: none;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 99;
+  transition: 0.1s;
+  background-image: url("../assets/toertli.svg");
+  background-size: contain; }
+  .burger-icon:hover {
+    transform: scale(1.05); }
+
+.menu {
+  position: absolute;
+  z-index: 10;
+  top: 1vw;
+  right: 1vw;
+  height: auto; }
+  .menu__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 20vw;
+    align-content: space-between; }
+    .menu__list__item {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      margin-bottom: 0.8vw; }
+      .menu__list__item a {
+        font-family: Obibok;
+        font-size: var(--font-menu);
+        text-decoration: none; }
+      .menu__list__item .active {
+        color: #e6672e; }
+
+.landing {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  height: 90vh; }
+  .landing__date {
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+    font-size: 2.9vw;
+    font-family: Obibok;
+    z-index: 5; }
+  .landing__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    width: 80vh;
+    z-index: 5;
+    background-image: url("../assets/logo-round.svg");
+    background-size: 94%;
+    -webkit-animation-duration: 30s;
+            animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-name: spin-logo;
+            animation-name: spin-logo; }
+  .landing__background {
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .landing__background__image  {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      top: 40%;
+      width: 130%; }
+
+@-webkit-keyframes spin-logo {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes spin-logo {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+.date__date {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100vw - (2*6vw)); }
+
+.vermicellesfans__image {
+  left: 15vw; }
+
+.vermicellesfans__text {
+  width: 50%;
+  margin-left: 50%; }
+
+.kontakt {
+  font-family: Obibok; }
+  .kontakt * {
+    font-size: var(--font-subtitle); }
+  .kontakt > div {
+    width: 60vw;
+    margin: 0 auto;
+    max-width: 600px; }
+  .kontakt h3 {
+    margin-bottom: 3vh; }
+  .kontakt__kontakt {
+    margin-bottom: 5vh !important; }
+  .kontakt .kontakt__offnungszeiten, .kontakt .kontakt__title {
+    margin-bottom: calc(12vh / 2); }
+  .kontakt .kontakt__offnungszeiten__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 35vw;
+    margin: 0 auto;
+    max-width: 450px; }
+    .kontakt .kontakt__offnungszeiten__info__day {
+      width: 30%;
+      text-align: left; }
+    .kontakt .kontakt__offnungszeiten__info__time {
+      width: 70%;
+      text-align: right; }
+
+.vermicelle-presse {
+  position: fixed;
+  top: -15vw;
+  height: 25vw;
+  width: 25vw;
+  width: 260px;
+  background-image: url("../assets/presse.svg");
+  transform: translateX(-67%);
+  transition: transform .5s;
+  z-index: -1; }
+  .vermicelle-presse.off {
+    transform: translate(-67%, -20px); }
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 12vh 6vw; }
+  .vermicelle-presse {
+    display: none; }
+  .sticker__container .sticker {
+    width: 15vh;
+    height: 15vh; }
+  .burger-icon {
+    display: inherit; }
+  .image {
+    position: relative;
+    height: calc(100vw - 12vw);
+    margin-bottom: 2vh;
+    width: calc((100vw - 12vw) / 1.5);
+    left: 50vw;
+    right: unset;
+    top: unset;
+    left: 50%;
+    transform: translateX(-50%); }
+    .image:hover {
+      transform: translateX(-50%) scale(1); }
+    .image.wide {
+      width: calc(100vw - 12vw);
+      height: calc((100vw - 12vw) / 1.5); }
+  .menu {
+    position: fixed;
+    width: 100vw;
+    background: white;
+    right: -100vw;
+    transition: 0.3s;
+    height: 100vh;
+    padding: 20vh 0; }
+    .menu.active {
+      right: 0; }
+    .menu__list {
+      top: 0;
+      width: 100%;
+      align-content: space-between;
+      align-items: space-between;
+      height: 100%; }
+      .menu__list__item a {
+        text-align: center; }
+      .menu__list__item {
+        text-align: center; }
+  .landing__background {
+    background-position: center;
+    transform: translate(-50%, -50%) rotate(90deg);
+    height: 200vw;
+    width: 200vh; }
+  .landing__logo {
+    width: 80vw;
+    height: 80vh; }
+  .vermicellesfans__text {
+    width: 100%;
+    margin-left: 0; }
+  .kontakt > div {
+    width: 90vw;
+    margin: 0 auto; }
+  .kontakt .kontakt__offnungszeiten__info {
+    width: 65vw; } }
+
+.safari canvas, .safari #vermicelle-presse {
+  display: none; }
