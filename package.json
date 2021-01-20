@@ -14,7 +14,7 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "babel-polyfill": "^6.26.0",
-    "gsap": "^2.1.3",
+    "gsap": "^3.6.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
     "gulp-babel": "^8.0.0",
